@@ -42,7 +42,7 @@ $ bundle exec rspec
 - Access to `host:9292/` and the server will get your location from your ip (if you access with localhost then the application will get the temperature from the default City)
 - You can send a parameter specifying your desired location and you'll get the temperature: `host:9292/Roma`
 - With query parameters you can specify the metric system, the default it's the international system.
-    - If you want to specify, you can send as query paramete `?metric_system=`
+    - If you want to specify, you can send as query parameter `?metric_system=%METRIC_SYSTEM%`
         - `si` : international metric system
         - `us` : imperial metric system
 
