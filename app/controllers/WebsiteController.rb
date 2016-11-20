@@ -7,10 +7,11 @@ config_file 'config/app_config.yml'
 
 get '/' do
   # GET CURRENT LOCATION
-  if defined?(request.location)
-    redirect to("/#{request.location.city}")
-  else
+  if request.ip == '127.0.0.1'
     redirect to("/#{settings.forecast_default_city}")
+  else
+    current_location = IpLocatioModule.get_location_from_ip(request.ip)
+    redirect to("/#{current_location}")
   end
 end
 
