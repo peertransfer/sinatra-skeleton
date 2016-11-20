@@ -7,15 +7,16 @@ This is a application made with ruby and sinatra, which gets the temperature fro
 ## Installation
 
 Clone the repo:
+
 ```
 $ git clone https://github.com/sanchezpaco/sinatra-skeleton
 ```
 
 Run bundle to install gems and prepare puma server:
+
 ```
 $ bundle install --path vendor/bundle -j 10
 $ bundle binstubs puma
-
 ```
 
 ## Run
@@ -24,7 +25,6 @@ From the installation directory, launch:
 
 ```
 $ bundle exec puma
-
 ```
 
 After this you'll have a server serving on port `9292`
@@ -35,7 +35,6 @@ From the installation directory, launch:
 
 ```
 $ bundle exec rspec
-
 ```
 
 ## Features:
@@ -44,9 +43,9 @@ $ bundle exec rspec
 - You can send a parameter specifying your desired location and you'll get the temperature: `host:9292/Roma`
 - With query parameters you can specify the metric system, the default it's the international system.
     - If you want to specify, you can send as query paramete `?metric_system=`
-        - si : international metric system
-        - us : imperial metric system
+        - `si` : international metric system
+        - `us` : imperial metric system
 
 ## Authors
 
-- Author:: Paco Sanchez ([sanchezpaco3@gmail.com](mailto:sanchezpaco3@gmail.com))
+- Author: Paco Sanchez ([sanchezpaco3@gmail.com](mailto:sanchezpaco3@gmail.com))
