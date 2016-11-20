@@ -10,7 +10,7 @@ get '/' do
   if request.ip == '127.0.0.1'
     redirect to("/#{settings.forecast_default_city}")
   else
-    current_location = IpLocatioModule.get_location_from_ip(request.ip)
+    current_location = IpLocationModule.get_location_from_ip(request.ip)
     redirect to("/#{current_location}")
   end
 end
