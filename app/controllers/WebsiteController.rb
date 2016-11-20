@@ -8,7 +8,6 @@ config_file 'config/app_config.yml'
 get '/' do
   # GET CURRENT LOCATION
   request_ip = request.ip
-  request_ip = request_ip[1, request_ip.length] if request_ip[0, 1] == '/'
   if request_ip == '127.0.0.1'
     redirect to("/#{settings.forecast_default_city}")
   else
