@@ -25,13 +25,17 @@ get '/:location' do
   metric_symbol = settings.forecast_metric_system_symbol[metric_system_requested]
 
   location = GoogleMapsModule.get_location_from_address(location_requested)
-  forecast_current_temp = ForecastModule.get_temperature_from_location(
-    settings.forecast_api_key, location['lat'],
-    location['lng'], metric_system_requested
-  )
+  if location == 'not found'
+    erb :error
+  else
+    forecast_current_temp = ForecastModule.get_temperature_from_location(
+      settings.forecast_api_key, location['lat'],
+      location['lng'], metric_system_requested
+    )
 
-  @location = location_requested
-  @temperature = forecast_current_temp
-  @metric_system = metric_symbol
-  erb :index
+    @location = location_requested
+    @temperature = forecast_current_temp
+    @metric_system = metric_symbol
+    erb :index
+  end
 end
