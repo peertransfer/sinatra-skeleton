@@ -1,0 +1,8 @@
+forecast_api_key: '99f08919415972d78b757e13a6fc1345'
+forecast_default_city: 'Valencia'
+forecast_default_metric_system: 'si'
+forecast_available_metric_systems: ['si','us']
+forecast_metric_system_symbol:
+  si: '°C'
+  us: '°F'
+  

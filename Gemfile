@@ -1,14 +1,15 @@
 # A sample Gemfile
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 gem 'rake'
 gem 'activesupport'
+gem 'rspec'
 
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'sinatra-activerecord'
 
-gem 'thin'
+gem 'puma'
 gem 'tux'
 
 # These gems are only installed when run as `bundle install --without production`
